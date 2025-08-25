@@ -18,9 +18,8 @@ Esta é uma API simples para gerenciamento de tarefas, criada utilizando apenas 
 ---
 
 ## ▶️ Como executar o projeto
-
+```bash
 1. Clone este repositório:
-   ```bash
    git clone <url-do-repo>
 
 2. Instale as dependências:
@@ -31,9 +30,9 @@ Esta é uma API simples para gerenciamento de tarefas, criada utilizando apenas 
 
 4. O servidor estará disponível em:
    http://localhost:3000
-   
+```
 ### 🔹 Listar todas as tarefas: (GET /tarefas)
-
+```bash
 {
     "id": "d5f8a4a2-7e4c-4d94-9e6d-34cfe3e41c4f",
     "tituloTarefa": "Tarefas do dia",
@@ -42,11 +41,12 @@ Esta é uma API simples para gerenciamento de tarefas, criada utilizando apenas 
     "dataConclusaoTarefa": "25/08/2025",
     "statusTarefa": "Concluido"
 }
+```
 
 ### 🔹 Criar uma nova tarefa: (POST /tarefas)
 
 #### Exemplo de body (JSON):
-
+```bash
 {
   "tituloTarefa": "Ler sobre HTTP",
   "descricaoTarefa": "Estudar requisições e respostas",
@@ -54,9 +54,9 @@ Esta é uma API simples para gerenciamento de tarefas, criada utilizando apenas 
   "dataConclusaoTarefa": "2025-08-27",
   "statusTarefa": "Pendente"
 }
-
+```
 #### Resposta:
-
+```bash
 {
   "id": "d5f8a4a2-7e4c-4d94-9e6d-34cfe3e41c4f",
   "tituloTarefa": "Ler sobre HTTP",
@@ -65,11 +65,11 @@ Esta é uma API simples para gerenciamento de tarefas, criada utilizando apenas 
   "dataConclusaoTarefa": "2025-08-27",
   "statusTarefa": "Pendente"
 }
-
+```
 ### 🔹 Atualizar uma tarefa (PUT /tarefas/:id)
 
 #### Exemplo de body (JSON):
-
+```bash
 {
   "tituloTarefa": "Estudar Node.js",
   "descricaoTarefa": "Aprender sobre API REST",
@@ -77,9 +77,9 @@ Esta é uma API simples para gerenciamento de tarefas, criada utilizando apenas 
   "dataConclusaoTarefa": "2025-08-28",
   "statusTarefa": "Pendete"
 }
-
+```
 #### Resposta:
-
+```bash
 {
   "id": "d5f8a4a2-7e4c-4d94-9e6d-34cfe3e41c4f",
   "tituloTarefa": "Estudar Node.js",
@@ -88,20 +88,21 @@ Esta é uma API simples para gerenciamento de tarefas, criada utilizando apenas 
   "dataConclusaoTarefa": "2025-08-28",
   "statusTarefa": "Concluído"
 }
+```
 
 ### 🔹 Deletar uma tarefa (DELETE /tarefas/:id)
 
 #### Resposta de sucesso:
-
+```bash
 Status: 204 No Content
-
+```
 #### Resposta caso não exista:
-
+```bash
 {
   "mensagem": "Tarefa não encontrada"
 }
 
-
+```
 ⚠️ Observações
 
 As tarefas são armazenadas em memória, ou seja, ao reiniciar o servidor todas as tarefas serão perdidas.
